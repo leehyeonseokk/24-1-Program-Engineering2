@@ -2,13 +2,19 @@ a=input('당신의 주민번호를 입력하세요:')
 if len(a)!=14:
     print('올바른 주민번호 입력하세요')
 else:
-    birth_year=int(a[:2])
+
     gender=int(a[7])
-    if gender==1 or gender==3:
-        birth_year+=1900
+    if gender==1:
+        birth_year = 1900+int(a[:2])
         gender="남자"
-    if gender==2 or gender==4:
-        birth_year += 1900
+    if gender==2 :
+        birth_year = 1900 + int(a[:2])
+        gender = "여자"
+    if gender == 3:
+        birth_year = 2000 + int(a[:2])
+        gender = "남자"
+    if gender==2 :
+        birth_year = 2000 + int(a[:2])
         gender = "여자"
 
 birth_month=a[2:4]
